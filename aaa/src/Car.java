@@ -1,18 +1,19 @@
 
 
-import java.util.*;   //Scanner Å¬·¡½º Æ÷ÇÔ
+import java.util.*;   //Scanner í´ë˜ìŠ¤ í¬í•¨
 
 
 public class Car {
 	Scanner input = new Scanner(System.in);
-	//staticº¯¼ö color ¼±¾ğ
-	 int speed;
+	//staticë³€ìˆ˜ color ì„ ì–¸
+	int a;
+	int speed;
 	 boolean onOff;
 	static String color;
 	boolean isLoad;
 	boolean asector;
 	boolean bsector;
-	//»ı¼ºÀÚ
+	//ìƒì„±ì
 	Car() {
 		color = "red";
 		speed = 30;
@@ -23,9 +24,9 @@ public class Car {
 	}
 	
 	
-	//static ¸Ş¼Òµå ¼±¾ğ
+	//static ë©”ì†Œë“œ ì„ ì–¸
 	public static String getColor() {
-		System.out.println("color¸¦ ÀÔ·ÂÇÏ½Ã¿À: ");
+		System.out.println("colorë¥¼ ì…ë ¥í•˜ì‹œì˜¤: ");
 		Scanner scan = new Scanner(System.in);
 		color=scan.nextLine();
 		return color;
@@ -33,31 +34,31 @@ public class Car {
 
 	
 	void getonOff() {
-		System.out.println("Â÷·®ÀÇ ½Ãµ¿À¯¹«=" + this.onOff);
+		System.out.println("ì°¨ëŸ‰ì˜ ì‹œë™ìœ ë¬´=" + this.onOff);
 	}
 	
-//¸Ş¼Òµå ¿À¹ö·Îµù Áü ¼öÇÏÄ­ a sector, b sector ÁüÀÇ À¯¹«È®ÀÎ, this.
+//ë©”ì†Œë“œ ì˜¤ë²„ë¡œë”© ì§ ìˆ˜í•˜ì¹¸ a sector, b sector ì§ì˜ ìœ ë¬´í™•ì¸, this.
 	void loadCarrier(boolean asector, boolean bsector) {
 		this.asector = asector;
 		this.bsector = bsector;
-		System.out.println("a¼½ÅÍ ÁüÀÇ À¯¹«´Â"+ this.asector + "b¼½ÅÍ ÁüÀÇ À¯¹«´Â"+ this.bsector);
+		System.out.println("aì„¹í„° ì§ì˜ ìœ ë¬´ëŠ”"+ this.asector + "bì„¹í„° ì§ì˜ ìœ ë¬´ëŠ”"+ this.bsector);
 	}
 	
 	
 	void loadCarrier(boolean asector) {
 		this.asector = asector;
-		System.out.println("a¼½ÅÍ ÁüÀÇ À¯¹«´Â" + this.asector);
+		System.out.println("aì„¹í„° ì§ì˜ ìœ ë¬´ëŠ”" + this.asector);
 	}
 
 	
 	void setSpeed() {
-		System.out.println("ÀÚµ¿Â÷ÀÇ ¼Óµµ¸¦ ÀÔ·ÂÇÏ½Ã¿À: ");
+		System.out.println("ìë™ì°¨ì˜ ì†ë„ë¥¼ ì…ë ¥í•˜ì‹œì˜¤: ");
 		int speed1 = input.nextInt();
 		this.speed = speed1;
 	}
 	
 	
 	void getSpeed() {
-		System.out.println("Áö±İ Â÷ÀÇ ¼Óµµ´Â : " + this.speed +"ÀÔ´Ï´Ù." );
+		System.out.println("ì§€ê¸ˆ ì°¨ì˜ ì†ë„ëŠ” : " + this.speed +"ì…ë‹ˆë‹¤." );
 	}
 }
