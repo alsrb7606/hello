@@ -7,6 +7,7 @@ public class Car {
 	Scanner input = new Scanner(System.in);
 	//static변수 color 선언
 	int a;
+	int b;
 	int speed;
 	 boolean onOff;
 	static String color;
